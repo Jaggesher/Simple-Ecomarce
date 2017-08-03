@@ -15,7 +15,7 @@
 
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -36,6 +36,7 @@
     </div>
   </div>
 </nav>
+<div style="height: 50px;width: 100%; background-color: rgb(0,66,144);"></div>
 <div class="container text-center">    
   <h3><i>MEN ITEMS</i></h3><br>
 

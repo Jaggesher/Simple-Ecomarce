@@ -15,7 +15,7 @@
 
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -31,12 +31,21 @@
         <li><a href="women.php">WOMEN</a></li>
         <li><a href="children.php">CHILDREN</a></li>
         <li><a href="electronics.php">Electronics</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="addProduct.php">Add Product</a></li>
+            <li><a href="deleteProduct.php">Delete Product</a></li>
+            <li><a href="LogOut.php">LogOut</a></li> 
+          </ul>
+        </li>
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
+<div style="height: 50px;width: 100%; background-color: rgb(0,66,144);"></div>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" height="450px">
     <!-- Indicators -->
     <ol class="carousel-indicators">
