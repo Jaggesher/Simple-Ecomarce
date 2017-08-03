@@ -1,5 +1,5 @@
 <?php
-
+	session_start();
 	!include "phpCode.php";
 
 	if(is_auth()=="yes"){

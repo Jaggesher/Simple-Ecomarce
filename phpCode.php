@@ -49,7 +49,9 @@
 	}
 
 	function Is_auth(){
-		return "yes";
+		if(isset($_SESSION["status"]) && $_SESSION["status"] == "ADMIN")
+			return "yes";
+		else header('location:logIn.php');
 	}
 	// echo InserIntotable(6,"kjm",123,"MKN","123213","dsfsdfsd","Sfsdf");
 	// echo GetLastID();

@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +35,19 @@
         <li><a href="women.php">WOMEN</a></li>
         <li class="active"><a href="children.php">CHILDREN</a></li>
         <li><a href="electronics.php">Electronics</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>
+        <?php
+         if(isset($_SESSION["status"]) && $_SESSION["status"] == "ADMIN"){
+          echo '<li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="addProduct.php">Add Product</a></li>
+              <li><a href="deleteProduct.php">Delete Product</a></li>
+              <li><a href="LogOut.php">LogOut</a></li> 
+            </ul>
+          </li>';
+         }else echo ' <li><a href="logIn.php"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>';
+        ?>
       </ul>
     </div>
   </div>
