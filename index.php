@@ -4,6 +4,7 @@
   <title>Online Shopping</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <script src="Jqury/jquery-3.2.1.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -22,14 +23,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">HOME</a>
+      <a class="navbar-brand" href="index.php">HOME</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">MEN</a></li>
-        <li><a href="#">WOMEN</a></li>
-        <li><a href="#">CHILDREN</a></li>
-        <li><a href="#">Electronics</a></li>
+        <li><a href="men.php">MEN</a></li>
+        <li><a href="women.php">WOMEN</a></li>
+        <li><a href="children.php">CHILDREN</a></li>
+        <li><a href="electronics.php">Electronics</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>
       </ul>
     </div>
@@ -82,10 +83,10 @@
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="Image/laptop.jpg" class="img-responsive" style="width:100%;height: 250px;"  alt="Image">
-        <p><strong>Name:</strong>Laptop</p>
-        <p><strong>Price:</strong>40000tk</p>
+        <p><strong>Name: </strong>Laptop</p>
+        <p><strong>Price: </strong>40000tk</p>
         <p><strong>Code: </strong>MW123</p>
-        <p><strong>Call:</strong> 0191*-*****4</p>
+        <p><strong>Call: </strong> 0191*-*****4</p>
       </div>
     </div>
 
@@ -95,17 +96,17 @@
         <p><strong>Name: </strong>Sandle</p>
         <p><strong>Price: </strong>400tk</p>
         <p><strong>Code: </strong>MW123</p>
-        <p><strong>Call:</strong> 0191*-*****4</p>
+        <p><strong>Call: </strong> 0191*-*****4</p>
       </div>
     </div>
 
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="Image/monitor.jpg" class="img-responsive" style="width:100%;height: 250px;" alt="Image">
-        <p><strong>Name:</strong>Monitor</p>
-        <p><strong>Price:</strong>8000tk</p>
+        <img src="Image/Tshirt-1.jpg" class="img-responsive" style="width:100%;height: 250px;" alt="Image">
+        <p><strong>Name: </strong> T-shirt</p>
+        <p><strong>Price: </strong>250tk</p>
         <p><strong>Code: </strong>MW123</p>
-        <p><strong>Call:</strong> 0191*-*****4</p>
+        <p><strong>Call: </strong> 0191*-*****4</p>
       </div>
     </div>
 
