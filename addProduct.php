@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  !include "phpCode.php";
+  Is_auth();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,17 +37,19 @@
         <li><a href="children.php">CHILDREN</a></li>
         <li><a href="electronics.php">Electronics</a></li>
 
-        <li class="dropdown active">
+       <?php
+         if(isset($_SESSION["status"]) && $_SESSION["status"] == "ADMIN"){
+          echo '<li class="dropdown active">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="addProduct.php">Add Product</a></li>
-                <li><a href="deleteProduct.php">Delete Product</a></li>
-                <li><a href="LogOut.php">LogOut</a></li> 
+              <li><a href="addProduct.php">Add Product</a></li>
+              <li><a href="deleteProduct.php">Delete Product</a></li>
+              <li><a href="LogOut.php">LogOut</a></li> 
             </ul>
-        </li>
-
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>
+          </li>';
+         }else echo ' <li><a href="logIn.php"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>';
+        ?>
       </ul>
     </div>
   </div>
