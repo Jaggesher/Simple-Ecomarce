@@ -52,7 +52,7 @@
   </div>
 </nav>
 <div style="height: 50px;width: 100%; background-color: rgb(0,66,144);"></div>
-<div class="container text-center">    
+<div class="container text-center" style="min-height:100vh">    
   <h3><i>MEN ITEMS</i></h3><br>
   
   <?php

@@ -2,7 +2,7 @@ CREATE TABLE product(
 ID int PRIMARY KEY,
 Name varchar(50) NOT NULL,
 Price  int NOT NULL,
-Code varchar(20) NOT NULL,
+Code varchar(20) NOT NULL UNIQUE,
 Mobile varchar(11) NOT NULL,
 Img  varchar(50) NOT NULL,
 Category varchar(15) NOT NUll);

@@ -44,7 +44,7 @@
             return $data;
         }else{
         	$conn->close();
-        	return '<h1 style="margin-top=450px; color: red; height:100vh; text-aligh:center">Product Aren\'t Available.</h1>';
+        	return '<h1 class="alert alert-danger" style="margin-top: 50px ;text-aligh:center">Product Aren\'t Available.</h1>';
         }
 	}
 
@@ -52,6 +52,41 @@
 		if(isset($_SESSION["status"]) && $_SESSION["status"] == "ADMIN")
 			return "yes";
 		else header('location:logIn.php');
+	}
+
+	function GiveIT($code){
+		include 'dbConnect.php';
+			$sql='SELECT * FROM product WHERE Code="'.$code.'"';
+			$result = $conn->query($sql);
+			if($result->num_rows > 0){
+				$row = $result->fetch_assoc();
+				$data='<div class="thumbnail">
+				        <img src="'.$row["Img"].'" class="img-responsive" style="width:100%;height: 250px;"  alt="Image">
+				        <p><strong>Name: </strong>'.$row["Name"].'</p>
+				        <p><strong>Price: </strong>'.$row["Price"].'tk</p>
+				        <p><strong>Code: </strong>'.$row["Code"].'</p>
+				        <p><strong>Call: </strong> '.$row["Mobile"].'</p>
+				        <button class="btn btn-primary" id="delete"> Delete It.</button>
+				      </div>';
+				$conn->close();
+				return $data;
+			}else{
+				return '<h3 class="alert alert-danger">Product Aren\'t Available.</h3>';
+			}
+	}
+
+	function DeleteIT($code){
+
+		include 'dbConnect.php';
+		$sql='DELETE FROM product WHERE Code="'.$code.'"';
+		if( $conn->query($sql)===TRUE){
+			$conn->close();
+	  		return '<h1 class="alert alert-success" style="text-aligh:center">Product Removed.</h1>';
+	  	}else {
+	  		$err=$conn->error;
+	  		$conn->close();
+	  		return $err;
+	  	}
 	}
 	// echo InserIntotable(6,"kjm",123,"MKN","123213","dsfsdfsd","Sfsdf");
 	// echo GetLastID();
