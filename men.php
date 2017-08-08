@@ -63,7 +63,8 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Ecomarce-Web-Site</p>
+  <h3>Alam Online Shop.</h3>
+  <p>Develpoed By Md. Jahangir Alam PGD in IT (2016~2017)</p>
 </footer>
 
 </body>
